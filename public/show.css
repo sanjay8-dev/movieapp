@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding : 0;
+    outline: none;
+}
+body{
+
+    margin : 0;
+    background:  url(https://images.unsplash.com/photo-1484950763426-56b5bf172dbb?ixlib=rb-1.2.1) no-repeat center center fixed ; 
+    background-size: cover;
+    background-position: center;
+
+
+}
+html
+{
+	height: 100%;
+}
+
+
+
+nav{
+    height:60px;
+    max-width: 100%;
+         
+}
+ .navbar-nav{
+    margin-left: 35%;
+    padding-top: 4px;
+}
+
+ .navbar-nav .nav-item .nav-link {
+
+    color:white ;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-left: 80px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    font-family: 'IBM Plex Serif', serif;
+}
+.navbar-brand{
+    font-family: 'Berkshire Swash', cursive ;
+    font-weight: 400;
+    letter-spacing: 3px;
+    font-size: 28px;
+    padding-left : 20px;
+    padding-top: 8.5px;
+    color: white !important;
+    }
+
+    .navbar-nav .nav-item a{
+        opacity: 1;
+        position: relative;
+    }
+    .navbar-nav .nav-item a::before{
+          content: '';
+          display: block;
+          height: 5px ;
+          width: 0%;
+          background-color: yellow !important;
+          position: absolute !important;
+          top: -1em;
+          left:0;
+          right:0;
+          transition: all ease-in-out 390ms;
+    }
+
+       ul .nav-item a:hover{
+           color: yellow !important;
+       }
+        a.nav-link:hover::before{
+        width: 100% !important;
+      
+    }
+
+
+@media(max-width:767px){
+       .navbar-nav{
+        text-align: center;
+        margin : 0 auto;
+        background: black;
+        line-height: 11.0rem;
+        width : 100% ;
+
+       }
+       #last{
+           padding-left:0;
+       }
+       .nav-link{
+           margin-left:0px !important;
+       } sa
+       ul a:hover{
+        background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+                        padding-left: 0;
+        color:white;
+        transition: ease-in-out 320ms;
+    
+    }
+}

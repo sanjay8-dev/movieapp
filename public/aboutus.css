@@ -1,0 +1,48 @@
+body{
+background: url("demo7.jpg") no-repeat center fixed;
+background-size: cover;
+
+}
+.name{
+    font-family: 'PT Sans Narrow', sans-serif;
+    	width: 500px;
+	position: absolute;
+	left: 20%;
+	top: 50%;
+	transform: translate(-20%,-50%);
+}
+.name span{
+    color: rgb(3, 73, 3);
+}
+.name p:nth-child(1),.name .details{
+	color:#6c707c;
+	font-size: 20px;
+}
+.name h1{
+	font-family: 'Marcellus', serif;
+	font-size: 45px;
+	margin:0px;
+	letter-spacing: 3px;
+	color:#292929;
+	margin-bottom: 10px;
+	font-weight: 800;
+}
+.cv-btn{
+    font-family: 'Marcellus', serif;
+	width:200px;
+    height: 45px;
+    font-size: 14px;
+    display: flex;
+    border-radius: 30px;
+	justify-content: center;
+	align-items: center;
+	background-color: #292929;
+    color:#FFFFFF;
+    text-decoration: none;
+}
+.cv-btn:hover{
+	background-color: darkgreen;
+	color: white;
+	transition: all ease 0.5s;
+	text-decoration: none;
+}

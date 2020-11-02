@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+        <link rel="stylesheet" href ="/main.css" type="text/css">
+        <link rel="stylesheet" href ="/styles.css" type="text/css">
+		<link rel="stylesheet" href = "/contact.css" type ="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500&family=Varela+Round&display=swap" rel="stylesheet">    
+			<script type="text/javascript" src="/js/background.js"></script>
+    </head>
+    <body>
+        
+        <nav  id ="navba" class="navbar navbar-expand-md navbar-dark">
+            <div class="container-fluid">
+            <span class="logo"><img src="https://i.ibb.co/TKZMfjf/logo.png"></span>
+            <a href="/" class="navbar-brand">SearchFlix</a>
+            <button onclick="myFunction()" class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/aboutMe" class="nav-link">About dev</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contact" class="nav-link">contact</a>
+                    </li>
+                    <li class="nav-item">
+                           <a href="http://www.omdbapi.com/" class="nav-link">API</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        </nav>
+		
+		  <section class ="contact">
+
+<div class="content">
+    <h2>Contact Us</h2>
+     <p>For all enquiries, please contact us by using the form below . Feel free to contact us via phone to know more about 
+         the website.
+     </p>
+</div>
+
+<div class="container">
+    <div class="contactInfo">
+        <div class="box">
+            <div class="icon"><i class ="fa fa-map-marker"></i></div>
+                <div class="text">
+                 <h3>Address</h3>
+                 <p>   Vidyanagar Street , 
+                     <br> Kasaragod, Kerala , india <br> 671123</p>
+                 </p> 
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="icon"><i class="fa fa-phone"></i></div>
+                <div class="text">
+                 <h3>Phone</h3>
+                 <p> 628-291-4826 
+                     </p>
+                 </p> 
+
+                </div>
+                </div>
+        <div class="box">
+            <div class="icon"><i class=" fa fa-envelope"></i></div>
+                <div class="text">
+                 <h3>Email</h3>
+                 <p> 
+                  fuegowebdev@gmail.com
+                 </p> 
+          </div>
+          </div>
+    </div>
+                
+    <div class ="contactform">
+        <form>
+    <h2>Send Message</h2>
+      <div class ="inputBox">
+          <input type="text" name="" id ="name" required="required">
+          <span>Full name</span>
+      </div>
+      <div class ="inputBox">
+          <input type="email" name="" id ="email" required="required">
+          <span>Email</span>
+      </div>
+      <div class ="inputBox">
+          <textarea id ="message" required="required"></textarea>
+          <span>Type your message here....</span>
+      </div>
+      <div class ="inputBox">
+          <input type="submit" value="Submit" >
+      </div>
+     </form>
+        
+    </div>
+</div>
+
+
+       </section>   
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+ $('form').on('submit' ,(e)=>{
+	e.preventDefault(); 
+	 
+	 const name = $('#name').val().trim();
+	 const email = $('#email').val().trim();
+	 const message = $('#message').val().trim();
+	 
+	 const data = {
+		 name, 
+		 email,
+		 message
+			 }
+	 $.post('/contact', data, function()
+		   {
+		 console.log("message has been sent");
+	 });
+	 
+	 
+ });
+	
+	
+	
+
+</script>
+ </body>
+</html>
+
+
